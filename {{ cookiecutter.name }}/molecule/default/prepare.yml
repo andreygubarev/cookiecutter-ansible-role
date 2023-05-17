@@ -1,0 +1,16 @@
+---
+- name: Prepare
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Update available packages
+      raw: apt update -yq
+      changed_when: false
+
+    - name: Install prerequisites
+      raw: apt install -yq --no-install-recommends ca-certificates curl unzip
+      changed_when: false
+
+    - name: Install Python 3.x
+      raw: test -e /usr/bin/python3 || apt install -yq --no-install-recommends python3-minimal python3-zipstream
+      changed_when: false
