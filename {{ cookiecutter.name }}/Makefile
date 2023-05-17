@@ -1,5 +1,4 @@
 ANSIBLE_VERSION := {{ cookiecutter.ansible_version }}
-
 ANSIBLE_VIRTUALENV ?= {{ cookiecutter.ansible_virtualenv}}
 ANSIBLE_PYTHON := $(ANSIBLE_VIRTUALENV)/bin/python3
 ANSIBLE_PIP := $(ANSIBLE_PYTHON) -m pip
@@ -14,8 +13,11 @@ $(ANSIBLE_VIRTUALENV):
 	python3 -m venv $(ANSIBLE_VIRTUALENV)
 	$(ANSIBLE_PIP) install -U pip setuptools wheel
 	$(ANSIBLE_PIP) install \
+		'ansible>=$(ANSIBLE_VERSION)' \
 		'ansible-lint' \
-		'ansible>=$(ANSIBLE_VERSION)'
+		'molecule>=5.0.0' \
+		'molecule-plugins[docker]' \
+		'testinfra>=6.0.0'
 
 .PHONY: virtualenv
 virtualenv: $(ANSIBLE_VIRTUALENV) ## Create local environment
@@ -26,4 +28,4 @@ clean: ## Remove cache
 
 .PHONY: lint
 lint: virtualenv ## Lint Ansible code
-	$(ANSIBLE_LINT) -v
+	@$(ANSIBLE_LINT) -v

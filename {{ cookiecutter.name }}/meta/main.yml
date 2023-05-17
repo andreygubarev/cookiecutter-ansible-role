@@ -8,6 +8,10 @@ galaxy_info:
   min_ansible_version: '{{ cookiecutter.ansible_version }}'
 
   platforms: []
+  # platforms:
+  # - name: Ubuntu
+  #   versions:
+  #   - focal
 
   galaxy_tags: []
 
