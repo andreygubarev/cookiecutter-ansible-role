@@ -1,0 +1,4 @@
+ansible>={{ ansible_version }}
+ansible-lint
+molecule>=5.0.0
+testinfra>=6.0.0
