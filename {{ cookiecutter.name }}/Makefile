@@ -16,7 +16,6 @@ $(ANSIBLE_VIRTUALENV):
 		'ansible>=$(ANSIBLE_VERSION)' \
 		'ansible-lint' \
 		'molecule>=5.0.0' \
-		'molecule-plugins[docker]' \
 		'testinfra>=6.0.0'
 
 .PHONY: virtualenv
