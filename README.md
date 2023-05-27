@@ -17,7 +17,7 @@ pip install molecule-qemu
 
 Create scenario:
 ```sh
-molecule init scenario default -d molecule-qemu
+molecule init scenario default --driver-name molecule-qemu --verifier-name testinfra
 ```
 
 ## Environment
