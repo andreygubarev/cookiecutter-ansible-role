@@ -5,7 +5,7 @@ galaxy_info:
 
   license: MIT
 
-  min_ansible_version: '{{ cookiecutter.ansible_version }}'
+  min_ansible_version: '{{ cookiecutter.ansible_version_min }}'
 
   platforms: []
   # platforms:

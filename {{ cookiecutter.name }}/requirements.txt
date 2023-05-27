@@ -1,4 +1,4 @@
-ansible>={{ ansible_version }}
+ansible>={{ ansible_version_min }},<{{ ansible_version_max }}
 ansible-lint
-molecule>=5.0.0
-testinfra>=6.0.0
+molecule>=5.0.0,<6.0.0
+testinfra>=6.0.0,<7.0.0
