@@ -1,7 +1,6 @@
 # Cookiecutter template for Ansible Role
 
 Generate your project from the project template using latest version:
-
 ```sh
 cookiecutter https://github.com/andreygubarev/cookiecutter-ansible-role.git
 ```
@@ -18,7 +17,6 @@ pip install molecule-qemu
 
 Create scenario:
 ```sh
-# molecule init scenario -r <role_name> -d <driver_name>
 molecule init scenario default -d molecule-qemu
 ```
 
