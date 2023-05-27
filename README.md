@@ -20,6 +20,18 @@ Create scenario:
 molecule init scenario default -d molecule-qemu
 ```
 
+## Environment
+
+Template has `Makefile` with targets for managing environment. To see all available targets run:
+```sh
+make help
+```
+
+Create virtual environment:
+```sh
+make virtualenv
+```
+
 # Reference
 
 - [Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/) - Templating library for creating boilerplate for projects.
