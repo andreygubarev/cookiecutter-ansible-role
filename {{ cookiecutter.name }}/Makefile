@@ -22,10 +22,10 @@ $(ANSIBLE_VIRTUALENV):
 .PHONY: virtualenv
 virtualenv: $(ANSIBLE_VIRTUALENV) ## Create local environment
 
-.PHONY: clean
-clean: ## Remove cache
-	rm -rf $(ANSIBLE_VIRTUALENV) *.tar.gz
-
 .PHONY: lint
 lint: virtualenv ## Lint Ansible code
 	@$(ANSIBLE_LINT) -v
+
+.PHONY: clean
+clean: ## Remove temporary files
+	rm -rf $(ANSIBLE_VIRTUALENV) *.tar.gz
