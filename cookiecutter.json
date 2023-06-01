@@ -7,6 +7,5 @@
     "author_url": "",
     "repository": "github.com",
     "ansible_version_min": "7.0.0",
-    "ansible_version_max": "8.0.0",
-    "ansible_virtualenv": ".venv"
+    "ansible_version_max": "8.0.0"
 }
